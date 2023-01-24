@@ -1,0 +1,54 @@
+#!/bin/sh
+
+alpha='dd'
+background='#282a36'
+selection='#44475a'
+comment='#6272a4'
+
+yellow='#f1fa8c'
+orange='#ffb86c'
+red='#ff5555'
+magenta='#ff79c6'
+blue='#6272a4'
+cyan='#8be9fd'
+green='50fa7b'
+
+i3lock \
+  --insidever-color=$selection$alpha \
+  --insidewrong-color=$selection$alpha \
+  --inside-color=$selection$alpha \
+  --ringver-color=$green$alpha \
+  --ringwrong-color=$red$alpha \
+  --ringver-color=$green$alpha \
+  --ringwrong-color=$red$alpha \
+  --ring-color=$blue$alpha \
+  --line-uses-ring \
+  --keyhl-color=$magenta$alpha \
+  --bshl-color=$orange$alpha \
+  --separator-color=$selection$alpha \
+  --verif-color=$green \
+  --wrong-color=$red \
+  --layout-color=$blue \
+  --date-color=$blue \
+  --time-color=$blue \
+  --screen 1 \
+  --blur 1 \
+  --clock \
+  --indicator \
+  --time-str="%I:%M:%S" \
+  --date-str="%A %B %e %Y" \
+  --verif-text="CHECKING..." \
+  --wrong-text="SKILL ISSUE" \
+  --noinput="NO INPUT???" \
+  --lock-text="LOCKING" \
+  --lockfailed="LOCK FAILED" \
+  --radius=120 \
+  --ring-width=10 \
+  --pass-media-keys \
+  --pass-screen-keys \
+  --pass-volume-keys \
+  --time-font="Hack Nerd Font" \
+  --date-font="Hack Nerd Font" \
+  --layout-font="Hack Nerd Font" \
+  --verif-font="Hack Nerd Font" \
+  --wrong-font="Hack Nerd Font" \

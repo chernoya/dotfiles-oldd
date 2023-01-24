@@ -1,0 +1,79 @@
+#Alacritty - Terminal
+super + Return
+	alacritty
+
+#App launcher
+super + d
+	dmenu_run -b
+
+#Reload sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#Quit bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+#Close app
+super + {_,shift + }q
+	bspc node -{c,k}
+
+#Alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+#Focus the node in the given direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+#Focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+#Send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+#MOVE/RESIZE
+
+#Expand a window by moving one of its side outward
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+#Contract a window by moving one of its side inward
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+#increase / decrease brightness
+XF86MonBrightnessDown
+	xbacklight -dec 5%
+
+XF86MonBrightnessUp
+	xbacklight -inc 5%
+
+#increase / decrease volume
+XF86AudioRaiseVolume
+	pamixer -i 1
+
+XF86AudioLowerVolume
+	pamixer -d 1
+
+#mute and unmute
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+#firefox
+super + b
+	firefox
+
+#full screen 
+super + f 
+	bspc node -t ~fullscreen
+
+
+
