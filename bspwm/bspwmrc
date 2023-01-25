@@ -3,8 +3,10 @@
 sxhkd &
 bspc monitor -d I II III IV V &
 picom &
-feh --bg-scale ~/Downloads/ghost-minimal-4k-l7.png &
+feh --bg-scale ~/.config/ghost-minimal-4k-l7.png &
 ~/.config/polybar/launch.sh &
+~/.config/dunst/low_battery.sh &
+
 
 bspc config border_width         1
 bspc config window_gap           20

@@ -2,10 +2,10 @@
 [global]
 
     follow = mouse
-    width = 300
-    height = 300
+    width = (250,350)
+    height = 250
     origin = top-right
-    offset = 10x50
+    offset = 12x57
     scale = 0
     notification_limit = 0
 
@@ -16,133 +16,77 @@
     progress_bar_max_width = 300
     indicate_hidden = yes
 
-    transparency = 0
-
+    transparency = 2
     separator_height = 2
-
-    # Padding between text and separator.
-    padding = 8
-
-    # Horizontal padding.
-    horizontal_padding = 10
-
-    # Padding between text and icon.
-    text_icon_padding = 5
-
-    # Defines width in pixels of frame around the notification window.
-    # Set to 0 to disable.
-    frame_width = 0
-
-    # Defines color of the frame around the notification window.
-    frame_color = "#282a36"
-
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 12
+    frame_width = 2
+    frame_color = "#eeeeee"
     separator_color = frame
-
-    # Sort messages by urgency.
     sort = yes
-
     idle_threshold = 120
 
-    ### Text ###
-
+    # Text
     font = Hack Nerd Font 12
-
     line_height = 0
-
     markup = full
-
-    format = "%s %p\n%b"
-
+    format = "<b>%s</b>\n%b"
     alignment = left
-
     vertical_alignment = center
-
     show_age_threshold = 60
-
-    # Specify where to make an ellipsis in long lines.
-    # Possible values are "start", "middle" and "end".
     ellipsize = middle
-
-    # Ignore newlines '\n' in notifications.
     ignore_newline = no
-
-    # Stack together notifications with the same content
     stack_duplicates = true
-
-    # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
-
-    # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
 
-    ### Icons ###
-
-    # Align icons left/right/off
+    # Icon
     icon_position = left
-
     min_icon_size = 0
-
-    # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 64
-
-    # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
-    ### History ###
-
-    # Should a notification popped up from history be sticky or timeout
-    # as if it would normally do.
+    # History 
     sticky_history = yes
-
-    # Maximum amount of notifications kept in history
     history_length = 20
 
-    ### Misc/Advanced ###
-
-    # dmenu path.
+    # Misc/Advanced 
     dmenu = /usr/bin/dmenu -p dunst:
-
-    # Browser for opening urls in context menu.
     browser = /usr/bin/firefox -new-tab
-
-    # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
-
-    # Define the title of the windows spawned by dunst
     title = Dunst
-
-    # Define the class of the windows spawned by dunst
     class = Dunst
-
-    corner_radius = 0
-  
-    ignore_dbusclose = false
-    
+    corner_radius = 20
+    ignore_dbusclose = false    
     force_xwayland = false
-   
     force_xinerama = false
-
     mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
-
 [experimental]
-
     per_monitor_dpi = false
 
+[shortcuts]
+    close = ctrl+space 
+    close_all = ctrl+shift+space 
+    history = ctrl+grave
+
 [urgency_low]
-    background = "#282a36"
-    foreground = "#6272a4"
-    timeout = 10
+    background = "#1e1f29"
+    foreground = "#50fa7b"
+    frame_color = "#50fa7b"
+    timeout = 0
 
 [urgency_normal]
-    background = "#282a36"
-    foreground = "#bd93f9"
-    timeout = 10
+    background = "#1e1f29"
+    foreground = "#eeeeee"
+    timeout = 20
 
 [urgency_critical]
-    background = "#ff5555"
-    foreground = "#f8f8f2"
+    background = "#1e1f29"
+    foreground = "#ff5555"
     frame_color = "#ff5555"
     timeout = 0
+
