@@ -1,1 +1,1 @@
-![](https://github.com/sceinja/bspwm-dotfiles/screenieweenie.png)
+![](https://github.com/sceinja/bspwm-dotfiles/blob/main/screenieweenie.png)
